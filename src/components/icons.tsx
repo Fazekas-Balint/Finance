@@ -216,41 +216,7 @@ export const ACCOUNT_ICON: Record<string, IconKey> = {
   credit: 'credit',
 }
 
-export const EMOJI_TO_KEY: Record<string, IconKey> = {
-  '🏠': 'home',
-  '🛒': 'cart',
-  '🚗': 'car',
-  '💡': 'utilities',
-  '🎬': 'entertainment',
-  '💊': 'health',
-  '📱': 'phone',
-  '📦': 'package',
-  '🍽️': 'food',
-  '👕': 'clothes',
-  '✈️': 'travel',
-  '🎓': 'education',
-  '🐾': 'pet',
-  '🎁': 'gift',
-  '🏋️': 'fitness',
-  '💇': 'beauty',
-  '🧾': 'bill',
-  '💼': 'work',
-  '🧰': 'tools',
-  '✨': 'extra',
-  '💰': 'money',
-  '📈': 'invest',
-  '🛟': 'emergency',
-  '🏖️': 'beach',
-  '💻': 'laptop',
-  '💍': 'ring',
-  '👶': 'baby',
-  '🧳': 'luggage',
-  '🩺': 'medical',
-  '🪙': 'coins',
-}
-
 export function normalizeIcon(value: unknown, fallback: IconKey = 'package'): IconKey {
   if (isIconKey(value)) return value
-  if (typeof value === 'string' && EMOJI_TO_KEY[value]) return EMOJI_TO_KEY[value]
   return fallback
 }
